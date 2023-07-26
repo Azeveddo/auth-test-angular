@@ -1,0 +1,41 @@
+<section>
+      <div class="container d-grid  justify-content-center">
+         <!-- Email input -->
+         <div class="formGroup">
+          <input type="text" class="formControl" placeholder="Username" #userName required>
+        </div>
+        <!-- Password input -->
+        <div class="formGroup">
+          <input type="password" class="formControl" placeholder="Password" #userPassword required>
+        </div>
+        <!--Redirectio to register components -->
+            <div class="">
+              <p class="">Forget Password ?
+                <a  routerLink="/forgot-password"
+                    class="link-danger">send email </a></p>
+            </div>
+          <!--Login Button -->
+          <div class="">
+            <button
+              type="submit"
+              color="primary"
+              class="btn btn-primary btn-lg"
+              (click)="authService.Login(userName.value, userPassword.value)">
+                 Login
+            </button>
+          </div>
+          <!--Redirectio to register components -->
+          <div class="">
+            <p class="">Don't have an account?
+              <a
+              routerLink="/sign-up"
+              class="link-danger">Register</a></p>
+          </div>
+        <!-- Connect with google -->
+          <div class="">
+            <p class="">Sign in with</p>
+            <!-- Connect with google -->
+            <button class="btn btn-danger" type="button" (click)="authService.GoogleAuth()">Google</button>
+          </div>
+      </div>
+</section>

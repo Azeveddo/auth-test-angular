@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "auth-todo-list-efe44": {
+      "hosting": {
+        "auth-todo-list": [
+          "auth-todo-list-efe44"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "auth-todo-list-efe44"
+  }
+}
